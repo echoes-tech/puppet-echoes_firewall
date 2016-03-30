@@ -12,14 +12,17 @@ class echoes_firewall::pre_ipv6 inherits echoes_firewall {
   firewallchain { 'FORWARD:filter:IPv6':
     ensure => $echoes_firewall::ipv6_forward_ensure,
     policy => $echoes_firewall::ipv6_forward_policy,
+    purge  => true,
   }->
   firewallchain { 'INPUT:filter:IPv6':
     ensure => $echoes_firewall::ipv6_input_ensure,
     policy => $echoes_firewall::ipv6_input_policy,
+    purge  => true,
   }->
   firewallchain { 'OUTPUT:filter:IPv6':
     ensure => $echoes_firewall::ipv6_output_ensure,
     policy => $echoes_firewall::ipv6_output_policy,
+    purge  => true,
   }
 
   if $echoes_firewall::allow_icmpv6 {

@@ -61,20 +61,6 @@ class echoes_firewall (
   validate_bool($manage_ipv4)
   validate_bool($manage_ipv6)
 
-  resources { 'firewall':
-    purge  => true,
-    ignore => [
-      '-j fail2ban-*',
-      ],
-  }
-
-  resources { 'firewallchain':
-    purge  => true,
-    ignore => [
-      '-j fail2ban-*',
-      ],
-  }
-
   if $manage_ipv4 {
     $post_ipv4_class = 'echoes_firewall::post'
     $pre_ipv4_class  = 'echoes_firewall::pre'

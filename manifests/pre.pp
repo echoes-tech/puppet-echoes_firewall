@@ -12,14 +12,20 @@ class echoes_firewall::pre inherits echoes_firewall {
   firewallchain { 'FORWARD:filter:IPv4':
     ensure => $echoes_firewall::ipv4_forward_ensure,
     policy => $echoes_firewall::ipv4_forward_policy,
+    purge  => true,
   }->
   firewallchain { 'INPUT:filter:IPv4':
     ensure => $echoes_firewall::ipv4_input_ensure,
     policy => $echoes_firewall::ipv4_input_policy,
+    purge  => true,
+    ignore => [
+      '-j fail2ban-*',
+      ],
   }->
   firewallchain { 'OUTPUT:filter:IPv4':
     ensure => $echoes_firewall::ipv4_output_ensure,
     policy => $echoes_firewall::ipv4_output_policy,
+    purge  => true,
   }
 
   if $echoes_firewall::allow_icmp {
