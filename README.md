@@ -73,11 +73,11 @@ Specifies whether ICMPv6 is allowed. Valid options: boolean. Default value: fals
 
 ##### `ipv4_allow_addr_for_ssh`
 
-Specifies which IPv4 addresses allowed to established a SSH connection. Valid options: array. Default value: []
+Specifies which IPv4 addresses are allowed to established a SSH connection. Valid options: array. Default value: []
 
 ##### `ipv6_allow_addr_for_ssh`
 
-Specifies which IPv6 addresses allowed to established a SSH connection. Valid options: array. Default value: []
+Specifies which IPv6 addresses are allowed to established a SSH connection. Valid options: array. Default value: []
 
 ##### `ipv4_forward_ensure`
 
