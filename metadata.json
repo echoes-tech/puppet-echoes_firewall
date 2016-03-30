@@ -1,7 +1,7 @@
 {
   "name": "echoes-echoes_firewall",
-  "version": "0.5.0",
-  "author": "Echoes Technologies",
+  "version": "0.1.0",
+  "author": "Echoes Tech & Labs",
   "summary": "Puppet module to manage firewall rules",
   "license": "Apache-2.0",
   "source": "https://github.com/echoes-tech/puppet-echoes_firewall",
